@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="parte-visual/index.css" />
+  <title>Lueverton Almeida</title>
+  <link rel="icon" href="parte-visual/icones/icone-head.png" />
+</head>
+
+<body>
+
+
+  <!--MENU SUSPENSO / MENU LATERAL-->
+  <nav class="navbar , menu">
+    <span><a href="#inicio"><img src="parte-visual/icones/menu/inicio.png">Página Inicial</a></span>
+    <span><a href="#sobre"><img src="parte-visual/icones/menu/sobre.png">Sobre</a></span>
+    <span><a href="#experiencia"><img src="parte-visual/icones/menu/experiencia.png">Experiência</a></span>
+    <span><a href="#contato"><img src="parte-visual/icones/menu/chat.png">Contato</a></span>
+  </nav>
+  <button class="icone-menu" onclick="menuShow()"><img id="icone"
+      src="parte-visual/icones/menu/icone-menu.png"></button>
+  <nav class="mobile-menu">
+    <span><a href="#inicio"><img src="parte-visual/icones/menu/inicio.png">Página Inicial</a></span>
+    <span><a href="#sobre"><img src="parte-visual/icones/menu/sobre.png">Sobre</a></span>
+    <span><a href="#experiencia"><img src="parte-visual/icones/menu/experiencia.png">Experiência</a></span>
+    <span><a href="#contato"><img src="parte-visual/icones/menu/chat.png">Contato</a></span>
+  </nav>
+
+
+  <!--INICIO DE CONTEÚDOS-->
+
+  <section id="inicio">
+    <!--<img src="Parte-visual/inicio-img-fundo.jpg" class="img-fundo inicio"> -->
+    <div>
+      <h1>Lueverton Almeida</h1><br>
+      <h3>Objetivo:</h3>
+      <h2>
+        Estagiário desenvolvedor
+        <br>de Software
+      </h2>
+      <p><img src="parte-visual/icones/email.png" /> lruanprofissional@gmail.com</p>
+      <p><img src="parte-visual/icones/whatsapp.png"> (11)94044-7643</p>
+      <p><img src="parte-visual/icones/location.png"> São Paulo - Brasil</p>
+    </div>
+    <span>
+      <a href="https://github.com/luevertonruan" class="icone" target="_blank"><img
+          src="parte-visual/icones/github.png" /></a>
+      <a href="https://www.linkedin.com/in/lueverton-ruan-20aaaa1a1/" target="_blank" class="icone"><img
+          src="parte-visual/icones/linkedin.png" /></a>
+    </span>
+  </section>
+
+
+  <!--PÁGINA SOBRE-->
+  <section id="sobre">
+    <div class="primeira-div">
+      <div class="caixa-texto">
+        <h3>SOBRE MIM</h3>
+        <p>
+          <span>Desenvolvedor estagiário</span>, cursando
+          <span>Análise e Desenvolvimento de Sistemas</span>.<br>
+          Atualmente <span>em transição de carreira</span>, do mercado de
+          logística para o mercado de tecnologia.
+        </p>
+      </div>
+
+      <div class="caixa-texto, conhecimentos">
+        <h3>CONHECIMENTOS</h3>
+        <p>Possuo conhecimento sobre as tecnologias:</p>
+        <span>Node.Js</span><span>Javascript</span><span>MySQL</span><span>GitHub</span><span>Html</span><br><span>CSS</span><span>Excel</span><span>Adobe
+          Photoshop</span><br><span>Adobe Illustrator</span>
+      </div>
+
+      <div class="caixa-texto">
+        <h3>FORMAÇÃO</h3>
+        <span>Centro Universitário Internacional | UNINTER</span>
+        <p>MAI 2021 - DEZ 2023 | Guarulhos</p>
+        <p>Análise de Desenvolvimento de Sistemas - EAD</p>
+        <h3>IDIOMAS</h3>
+        <span>Inglês e Espanhol</span>
+        <p>Leitura e compreensão textual</p>
+      </div>
+      <img src="parte-visual/sobre-objeto.png" />
+    </div>
+  </section>
+
+  <!--PÁGINA EXPERIÊNCIA-->
+  <section id="experiencia">
+    <div>
+      <h1>MEUS PROJETOS</h1>
+      <div class="caixa-texto projetos-desktop">
+        <h3>CALCULADORA MULTIFUNCIONAL</h3>
+        <p>
+          Com <span>4 opções de cálculo</span>: Calculadora tradicional,
+          Validador de CPF, Validador de CNPJ e Gerador de Matriz Transposta.
+          <br>
+          Desenvolvi minha <span>lógica de programação</span> e aprendi um
+          pouco da <span>linguagem de programação</span> NodeJs.
+        </p>
+        <p>
+          <span>(NODE JS - Back-End)</span> <a class="margin1" target="_blank"
+            href="https://github.com/luevertonruan/NodeJs-LogicaDeProgramacao/tree/main/CalculadoraMultifuncional">ACESSO
+            GITHUB</a>
+        </p>
+        <button class="botao-gif3" onclick="mostrarGif3()">
+          <p>VER PRÉVIA</p>
+        </button>
+      </div>
+      <div class="caixa-gif3">
+        <button class="fechar-gif" onclick="mostrarGif3()"><img src="parte-visual/icones/fechar-gif.svg"></button>
+        <video src="parte-visual/GIF-CALC-MULTIFUNCIONAL.mp4" autoplay muted></video>
+      </div>
+      <div class="caixa-texto projetos-desktop">
+        <h3>SITE DE APRESENTAÇÃO PROFISSIONAL</h3>
+        <p>
+          <span>Site atual</span>, traz o estilo vintage e minimalista.
+          Explorei as principais tags <span>HTML</span>, e demonstrei minha
+          habilidade estética com <span>CSS</span>.
+          <br>
+          Contém interação com o banco de dados <span>MySQL</span>, através de
+          <span>formulário para contato</span>.
+        </p>
+        <p>
+          <span>(HTML, CSS & MySQL - Front-End)</span>
+          <a target="_blank">ACESSO GITHUB</a>
+        </p>
+        <button class="botao-gif4" onclick="mostrarGif4()">
+          <p>VER PRÉVIA</p>
+        </button>
+      </div>
+      <div class="caixa-gif4">
+        <button class="fechar-gif" onclick="mostrarGif4()"><img src="parte-visual/icones/fechar-gif.svg"></button>
+        <video src="parte-visual/GIF-SITE-APRESENTACAO.mp4" autoplay muted></video>
+      </div>
+      <!-- SEÇÃO MOBILE - MEUS PROJETOS -->
+      <div class="projetos-mobile">
+        <button class="botao-gif" onclick="mostrarGif()">
+          <h4>CALCULADORA MULTIFUNCIONAL</h4>
+        </button>
+        <button class="botao-gif2" onclick="mostrarGif2()">
+          <h4>SITE DE APRESENTAÇÃO PROFISSIONAL</h4>
+        </button>
+        <div class="caixa-texto-mobile">
+          <button class="fechar-gif" onclick="mostrarGif()"><img src="parte-visual/icones/fechar-gif.svg"></button>
+          <div class="caixa-gif"><video src="parte-visual/GIF-CALC-MULTIFUNCIONAL-MOBILE.mp4" autoplay muted></video>
+          </div>
+          <h2>CALCULADORA MULTIFUNCIONAL</h2>
+          <span>NODE JS - Back-End</span>
+          <a target="_blank"
+            href="https://github.com/luevertonruan/NodeJs-LogicaDeProgramacao/tree/main/CalculadoraMultifuncional">ACESSO
+            GITHUB
+          </a>
+          <p>
+            Com <span>4 opções de cálculo</span>: Calculadora tradicional,
+            Validador de CPF, Validador de CNPJ e Gerador de Matriz Transposta.
+            <br>
+            Desenvolvi minha <span>lógica de programação</span> e aprendi um
+            pouco da <span>linguagem de programação</span> NodeJs.
+          </p>
+        </div>
+        <!-- SEÇÃO MOBILE - MEUS PROJETOS -->
+        <div class="caixa-texto-mobile2">
+          <button class="fechar-gif2" onclick="mostrarGif2()"><img src="parte-visual/icones/fechar-gif.svg"></button>
+          <div class="caixa-gif2">
+            <video src="parte-visual/GIF-SITE-APRESENTACAO.mp4" autoplay muted></video>
+          </div>
+          <h2>SITE DE APRESENTAÇÃO PROFISSIONAL</h2>
+          <span>HTML, CSS & MySQL - Front-End</span>
+          <a target="_blank">ACESSO GITHUB</a>
+          <p>
+            <span>Site atual</span>, traz o estilo vintage e minimalista.
+            Explorei as principais tags <span>HTML</span>, e demonstrei minha
+            habilidade estética com <span>CSS</span>.
+            <br>
+            Contém interação com o banco de dados <span>MySQL</span>, através de
+            <span>formulário para contato</span>.
+          </p>
+        </div>
+      </div>
+
+      <div class="caixa-texto vertical">
+        <h2>OUTROS PROJETOS:</h2>
+        <span>
+          <h3>Superman e Louis <br>| HTML e CSS</h3>
+          <a target="_blank"
+            href="https://github.com/luevertonruan/DevMedia/tree/main/Front-end/serie-superman-e-louis">ACESSO
+            GITHUB</a>
+        </span>
+        <span>
+          <h3>Senhor Lei <br>| HTML e CSS</h3>
+          <a target="_blank"
+            href="https://github.com/luevertonruan/DevMedia/tree/main/Front-end/pagina-de-advocacia">ACESSO GITHUB</a>
+        </span>
+        <span>
+          <h3>A Era Artificial <br>| HTML e CSS</h3>
+          <a target="_blank"
+            href="https://github.com/luevertonruan/DevMedia/tree/main/Front-end/apresentacao-livro">ACESSO GITHUB</a>
+        </span>
+      </div>
+      <div class="caixa-texto horizontal , outras-experiencias">
+        <h2>EXPERIÊNCIA PROFISSIONAL:</h2>
+        <span>
+          <h3>DBA Express | Aux. de Logística </h3>
+          <p>NOV 2020 - DEZ 2021</p>
+        </span>
+        <span>
+          <h3>REDE FORTE | Anl. de Logística</h3>
+          <p>OUT 2022 - MAI 2023</p>
+        </span>
+      </div>
+    </div>
+  </section>
+
+
+  <!--PÁGINA CONTATO-->
+  <section id="contato">
+    <div>
+      <form id="myForm"><!-- action="form.php" method="POST" -->
+        <span class="nome">
+          <input type="text" name="nome" id="nome" placeholder="NOME" required minlength="3" maxlength="10"></input>
+          <input type="text" name="sobrenome" id="sobrenome" placeholder="SOBRENOME" required minlength="3"
+            maxlength="10"></input>
+        </span>
+        <span class="email">
+          <input type="email" name="email" id="email" placeholder="E-MAIL" required minlength="7"
+            maxlength="40"></input>
+        </span>
+        <textarea name="msg" id="msg" placeholder="SUA MENSAGEM" required minlength="7" maxlength="120"></textarea>
+        <button type="submit" class="botao-enviar"><img src="parte-visual/icones/formulario/enviar-msg.png"></button>
+      </form>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

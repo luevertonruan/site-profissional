@@ -1,0 +1,799 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(201, 201, 201);
+  font-family: Calibri;
+  flex-basis: 100vw;
+}
+body {
+  background-color: #141414;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+span {
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
+}
+
+/*** SECTIONS [S&CT] ***/
+section {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+section div {
+  border-style: none;
+}
+
+/*** MENU SUPERIOR/ NAVS [N4VS] ***/
+nav,
+.mobile-menu {
+  display: flex;
+  box-sizing: border-box;
+  position: fixed;
+  border-radius: 12px;
+  justify-content: stretch;
+  font-weight: bold;
+  backdrop-filter: blur(8px);
+}
+nav a:hover {
+  background-color: #ffffff0e;
+  border-radius: 20px;
+}
+
+/*** CAMPO INICIO [!NIC1] ***/
+#inicio {
+  background-image: url("inicio-img-fundo2.png");
+  height: 100vh;
+  max-width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 0;
+}
+#inicio div:first-of-type {
+  height: 20vh;
+  margin: 52vh 0 0 50px;
+  margin-bottom: 0;
+  position: absolute;
+  top: 0;
+  padding: 0;
+}
+#inicio p img {
+  height: 2vh;
+  width: 1vw;
+}
+#inicio span a img {
+  height: 65px;
+}
+#inicio span a img:hover {
+  height: 75px;
+}
+#inicio span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 60px;
+  position: absolute;
+  bottom: 17vh;
+}
+
+/*** CAMPO SOBRE [S@BR] ***/
+#sobre {
+  margin-top: 0;
+  display: flex;
+  position: relative;
+}
+#sobre div {
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+#sobre img {
+  position: absolute;
+  display: flex;
+  z-index: -2;
+  opacity: 30%;
+}
+
+#sobre .conhecimentos span {
+  border: 2px solid #202020;
+  color: white;
+  line-height: 36px;
+  border-radius: 12px;
+  font-size: 15px;
+  text-align: left;
+  padding: 5px 8px;
+  margin: 2px;
+}
+#sobre .caixa-texto {
+  padding: 0;
+  margin: 40px 0;
+}
+
+/*** CAMPO EXPERIÊNCIA [EX8P] ***/
+#experiencia {
+  display: flex;
+  background-color: #121212;
+}
+#experiencia p {
+  margin: 12px 0;
+}
+#experiencia div {
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+#experiencia .caixa-texto p a {
+  background-color: #0000009c;
+  border: 2px solid #ffffff25;
+  padding: 4px;
+  border-radius: 8px;
+}
+#experiencia .caixa-texto {
+  border: 3px solid #ffffff25;
+  border-radius: 30px;
+}
+.caixa-gif,
+.caixa-gif2,
+.caixa-gif3,
+.caixa-gif4 {
+  background-color: #0000009c;
+  flex-direction: row;
+}
+.fechar-gif {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+#experiencia .caixa-texto.horizontal,
+.caixa-texto.vertical {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 1.3vh;
+  height: 12vh;
+  flex-direction: row;
+}
+#experiencia .caixa-texto.horizontal {
+  align-items: center;
+}
+
+#experiencia .caixa-texto.horizontal span {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 95%;
+}
+#experiencia .caixa-texto.horizontal span,
+#experiencia .caixa-texto.vertical span {
+  align-items: center;
+  justify-content: center;
+  background-color: #0000009c;
+  border-radius: 20px;
+  padding: 1vw;
+}
+#experiencia .caixa-texto.horizontal a:hover,
+.caixa-texto.vertical a:hover {
+  color: #ff4d6b;
+}
+
+#experiencia .outras-experiencias span {
+  max-width: 300px;
+  padding: 1vw;
+  justify-content: center;
+}
+
+/*** CAMPO CONTATO [C@TT] ***/
+#contato {
+  background-image: url("contatos-img-fundo2.png");
+  max-height: 100vh;
+  max-width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  bottom: 0px;
+  align-items: center;
+  justify-content: center;
+}
+#contato div {
+  display: flex;
+  position: absolute;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+}
+#contato form {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #ffffff05;
+  border: 1px solid #ffffff25;
+  backdrop-filter: blur(15px);
+  height: 70vh;
+  max-height: 70vh;
+  border-radius: 3%;
+  text-align: center;
+}
+#contato form input {
+  box-sizing: border-box;
+  margin-bottom: 3%;
+  height: 30px;
+  max-height: 76%;
+  color: #d0d0d0;
+}
+#contato form input ::placeholder {
+  font-weight: bold;
+}
+#contato form .nome {
+  width: 100%;
+}
+#contato form .nome input {
+  display: inline;
+}
+#contato form .email input {
+  display: inline;
+  width: 96%;
+}
+#contato form button {
+  background-color: #7c4dffa2;
+  backdrop-filter: blur(90px);
+  min-height: 5vh;
+  height: 15%;
+  border-radius: 50%;
+  border: 0;
+  position: absolute;
+  bottom: 5%;
+  z-index: 20;
+}
+#contato form input,
+textarea {
+  background-color: #151515ea;
+  border: 0;
+  border-radius: 7px;
+  box-sizing: border-box;
+  font-size: 85%;
+}
+#contato form textarea {
+  width: 96%;
+}
+#contato form button img {
+  width: 90%;
+}
+#contato form button:hover {
+  border: 3px solid #ffffff25;
+}
+
+@media only screen and (min-width: 854px) {
+  /*** MENU SUPERIOR/ NAVS - DESKTOP [N4VS] ***/
+  nav img,
+  .icone-menu {
+    display: none;
+  }
+  nav {
+    height: 50px;
+    min-width: 90vw;
+    background-color: #141414d0;
+    border: 1px solid #ffffff25;
+    margin: 0 4vw;
+    top: 20px;
+    text-align: center;
+    align-items: center;
+    vertical-align: middle;
+    z-index: 4;
+  }
+  nav a:hover {
+    padding: 5px 20px;
+  }
+  .mobile-menu {
+    display: none;
+  }
+
+  /*** CAMPO INICIO - DESKTOP [!NIC1] ***/
+  #inicio h1 {
+    flex-wrap: wrap;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 0;
+  }
+  #inicio span {
+    right: 5vw;
+  }
+  #inicio div:first-child {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 1vw;
+    top: 12vh;
+  }
+  section div:first-child {
+    padding: 5vh 5vw;
+  }
+
+  /*** CAMPO SOBRE - DESKTOP [S@BR] ***/
+  #sobre .caixa-texto {
+    max-width: 35vw;
+  }
+  #sobre .conhecimentos span {
+    width: 200px;
+  }
+  #sobre .conhecimentos span:hover {
+    border-color: #ff4d6b;
+  }
+  #sobre img {
+    bottom: 60px;
+    width: 60%;
+    height: 80%;
+    left: 47vw;
+  }
+
+  /*** CAMPO EXPERIÊNCIA - DESKTOP [EX8P] ***/
+  #experiencia {
+    height: 100vh;
+    position: relative;
+  }
+  .botao-gif,
+  .botao-gif2 {
+    display: none;
+  }
+  #experiencia h1 {
+    text-align: center;
+  }
+  #experiencia p {
+    max-width: 50vw;
+  }
+  #experiencia .projetos-mobile {
+    display: none;
+  }
+  #experiencia .caixa-texto {
+    display: flex;
+    position: relative;
+    max-width: 88vw;
+    max-height: 28vh;
+    z-index: 0;
+    padding: 8px;
+    margin-top: 30px;
+    background-color: #121212;
+  }
+  #experiencia .caixa-texto.projetos-desktop {
+    width: 50vw;
+    position: relative;
+  }
+  .botao-gif3,
+  .botao-gif4 {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #ffffff25;
+    background-color: #696969;
+    padding: 4px;
+    border-radius: 8px;
+    right: 12vw;
+    bottom: 2.5vh;
+    width: 8vw;
+    height: 4.8vh;
+  }
+  .botao-gif3 p,
+  .botao-gif4 p {
+    text-align: center;
+    font-size: 15px;
+  }
+  .botao-gif3:hover,
+  .botao-gif4:hover {
+    background-color: #ff4d6b;
+  }
+  #experiencia .caixa-texto p a:hover {
+    background-color: #4e6eb3;
+  }
+  .caixa-gif3,
+  .caixa-gif4 {
+    display: none;
+    background-color: #1616167e;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 5;
+    justify-content: center;
+    align-items: center;
+    top: 0vh;
+    left: 0vw;
+    height: 100vh;
+    width: 99vw;
+  }
+  .caixa-gif3 video,
+  .caixa-gif4 video {
+    position: absolute;
+    border: 4px solid #ffffff0a;
+    padding: 0;
+    width: 95%;
+    height: 95%;
+    border-radius: 25px;
+  }
+  .fechar-gif {
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+    justify-content: start;
+    max-width: 1.5vw;
+    max-height: 1vh;
+    z-index: 6;
+  }
+  .fechar-gif img {
+    width: 20px;
+    height: 20px;
+  }
+  .abrir {
+    display: flex;
+  }
+  #experiencia .caixa-texto p a {
+    right: 38vw;
+  }
+  #experiencia .caixa-texto p a {
+    margin-left: 500px;
+  }
+  #experiencia .caixa-texto.projetos-desktop p a {
+    position: absolute;
+    right: 2vw;
+    bottom: 2.2vh;
+    height: 5.2vh;
+  }
+  #experiencia .caixa-texto.horizontal p,
+  .caixa-texto.vertical p {
+    margin: 0 20px;
+  }
+  #experiencia .caixa-texto.horizontal br,
+  .caixa-texto.vertical br {
+    display: none;
+  }
+  #experiencia .caixa-texto.horizontal span {
+    margin-left: 20px;
+    align-items: center;
+    display: flex;
+  }
+  #experiencia .caixa-texto.vertical span {
+    max-width: 20vw;
+  }
+  #experiencia .caixa-texto.vertical {
+    background-color: #0e0d0d7a;
+  }
+  #experiencia .caixa-texto.horizontal a,
+  .caixa-texto.vertical a {
+    color: #5c5c5c;
+    flex-wrap: nowrap;
+  }
+  .caixa-texto.vertical {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-around;
+    min-height: 60vh;
+    top: -29vw;
+    left: 63vw;
+    width: 25vw;
+  }
+  .caixa-texto.vertical h2 {
+    text-align: center;
+  }
+  .botao-gif,
+  .botao-gif2 {
+    display: flex;
+  }
+  #experiencia .outras-experiencias {
+    position: absolute;
+    top: 75vh;
+    width: 90vw;
+  }
+
+  /*** CAMPO CONTATO - DESKTOP [C@TT] ***/
+  #contato div {
+    width: 50vw;
+  }
+  #contato form {
+    max-width: 30vw;
+  }
+  #contato form .nome input {
+    width: 47%;
+  }
+  #contato form .nome input:first-of-type {
+    margin-right: 6.6px;
+  }
+  #contato form .email input {
+    width: 96%;
+  }
+  #contato form button {
+    min-width: 5vh;
+    width: 15%;
+    right: -5%;
+  }
+  #contato form textarea {
+    height: 50vh;
+  }
+  #contato form input,
+  textarea {
+    padding-left: 5px;
+  }
+}
+@media only screen and (max-width: 853px) {
+  /*** MENU SUPERIOR/ NAVS - MOBILE [N4VS] ***/
+  .navbar {
+    display: none;
+  }
+  .icone-menu {
+    border: none;
+    height: 60px;
+    min-width: 60px;
+    background-color: #141414d0;
+    border: 1px solid #ffffff25;
+    margin: 0 4vw;
+    top: 20px;
+    align-items: center;
+    position: fixed;
+    z-index: 4;
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+  }
+  .mobile-menu {
+    height: 70vh;
+    width: 35vw;
+    margin: 0 4vw;
+    padding-top: 9vh;
+    top: 45px;
+    z-index: 3;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #141414d0;
+    border: 1px solid #ffffff25;
+    border-radius: 15px;
+  }
+  .icone-menu img {
+    height: 25px;
+    width: 25px;
+    margin: 7px;
+    cursor: pointer;
+  }
+  .mobile-menu img {
+    height: 15px;
+    width: 15px;
+    margin-right: 15px;
+  }
+  .mobile-menu {
+    display: none;
+  }
+  .open {
+    display: flex;
+  }
+
+  /*** CAMPO INICIO - MOBILE [!NIC1] ***/
+  #inicio {
+    background-position-x: -30vw;
+  }
+  #inicio span {
+    right: 30px;
+  }
+  section:first-of-type div {
+    margin: 52vh 0 0 30px;
+  }
+
+  /*** CAMPO SOBRE - MOBILE [S@BR] ***/
+  #sobre div img {
+    left: -100px;
+    bottom: 0px;
+    width: auto;
+    height: 100%;
+  }
+  #sobre .conhecimentos span {
+    border-color: #ff4d6b;
+  }
+  #sobre {
+    padding: 0.5vh 0.5vw;
+  }
+
+  /*** CAMPO EXPERIÊNCIA - MOBILE [EX8P] ***/
+  #experiencia h1 {
+    text-align: start;
+    margin-left: 7px;
+  }
+  #experiencia {
+    padding: 0.5vh 0.5vw;
+  }
+  #experiencia .caixa-texto.caixa-texto.projetos-desktop {
+    display: none;
+  }
+  .projetos-mobile {
+    max-width: 100vw;
+    max-height: 65vh;
+    padding: 1vh 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .botao-gif,
+  .botao-gif2 {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0px;
+    border-radius: 4px;
+    padding: 2px;
+    margin: 3px;
+    height: 60vh;
+    width: 45vw;
+  }
+  .botao-gif2 h4 {
+    color: #696969;
+    background-color: #0000000a;
+  }
+  .botao-gif h4 {
+    color: #000000;
+    background-color: #ffffff11;
+  }
+  .botao-gif h4,
+  .botao-gif2 h4 {
+    font-size: 4vw;
+    font-weight: bold;
+    margin: 3vw;
+    backdrop-filter: blur(2px);
+    border-radius: 15px;
+  }
+  .botao-gif {
+    background-image: url("CALCULADORA-MULTI.jpg");
+  }
+  .botao-gif2 {
+    background-image: url("SITE-APRESENTACAO.jpg");
+  }
+  .botao-gif:hover,
+  .botao-gif2:hover {
+    border: 2px solid #d0d0d09a;
+  }
+  .caixa-texto-mobile,
+  .caixa-texto-mobile2 {
+    background-color: #000000d2;
+    backdrop-filter: blur(100px);
+    position: fixed;
+    box-sizing: border-box;
+    align-items: start;
+    z-index: 4;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    padding: 1vh 1vw;
+  }
+  .fechar-gif,
+  .fechar-gif2 {
+    max-width: 1vw;
+    max-height: 0.5vh;
+  }
+  .fechar-gif img,
+  .fechar-gif2 img {
+    width: 20px;
+    height: 20px;
+  }
+  .caixa-texto-mobile {
+    display: none;
+  }
+  .caixa-texto-mobile2 {
+    display: none;
+  }
+  .caixa-gif,
+  .caixa-gif2 {
+    backdrop-filter: blur(25px);
+    margin-top: 1vh;
+    height: 55vh;
+    width: 100vw;
+    z-index: 4;
+  }
+  .caixa-gif video,
+  .caixa-gif2 video {
+    width: 100%;
+    height: 100%;
+  }
+  .caixa-gif3,
+  .caixa-gif4 {
+    display: none;
+  }
+  .caixa-texto-mobile a,
+  .caixa-texto-mobile2 a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 80vw;
+    margin-left: 7vw;
+    height: 7vh;
+    background-color: #4e6eb3;
+    font-size: 22px;
+    font-weight: bolder;
+  }
+  .caixa-texto-mobile a:hover,
+  .caixa-texto-mobile2 a:hover {
+    border: 1px solid #d0d0d09a;
+  }
+  .caixa-texto-mobile p,
+  .caixa-texto-mobile2 p {
+    max-width: 95vh;
+    margin: 0;
+  }
+  .abrir,
+  .abrir2 {
+    display: flex;
+  }
+
+  #experiencia .caixa-texto.horizontal span,
+  #experiencia .caixa-texto.horizontal a,
+  .caixa-texto.vertical span,
+  .caixa-texto.vertical a {
+    font-size: 12px;
+    line-height: 10px;
+  }
+  #experiencia .caixa-texto.horizontal span,
+  .caixa-texto.vertical span {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 1vw;
+    padding: 3px;
+  }
+  .caixa-texto.vertical {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .caixa-texto.vertical span {
+    max-width: 150px;
+  }
+  #experiencia .caixa-texto.horizontal span h3,
+  .caixa-texto.vertical span h3 {
+    font-size: 10px;
+    line-height: normal;
+  }
+
+  #experiencia .caixa-texto.horizontal .margin-top,
+  .caixa-texto.vertical .margin-top {
+    margin-top: 0.5vh;
+  }
+  #experiencia .caixa-texto.horizontal h2,
+  .caixa-texto.vertical h2 {
+    font-size: 13px;
+    margin-top: 1vh;
+  }
+
+  /*** CAMPO CONTATO - MOBILE [C@TT] ***/
+  #contato div {
+    width: 80vw;
+  }
+  #contato form {
+    max-width: 80vw;
+    height: 70vh;
+  }
+  #contato form .nome input {
+    width: 45.8%;
+  }
+  #contato form .nome input:first-of-type {
+    margin-right: 6.6px;
+  }
+  #contato form .email input {
+    width: 96%;
+  }
+  #contato form button {
+    min-width: 5vh;
+    width: 15%;
+    right: -5%;
+  }
+  #contato textarea {
+    height: 75%;
+  }
+  #contato form input,
+  textarea {
+    padding-left: 5px;
+  }
+}
+/*** @media only screen and (max-width: 853px);***/
