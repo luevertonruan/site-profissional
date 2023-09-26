@@ -1,31 +1,52 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   color: rgb(201, 201, 201);
   font-family: Calibri;
-  flex-basis: 100vw;
 }
 body {
+  display: flex;
+  flex-direction: column;
   background-color: #141414;
   overflow-x: hidden;
   max-width: 100vw;
 }
+
 span {
   font-weight: bold;
 }
 a {
   text-decoration: none;
 }
-
-/*** SECTIONS [S&CT] ***/
-section {
-  display: flex;
-  flex-wrap: wrap;
+.distribuidor {
   height: 100vh;
+  width: 100vw;
 }
-section div {
+.flex {
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
   border-style: none;
+}
+
+.distribuidor,
+.botao-gif,
+.botao-gif2 {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#inicio:first-child,
+#sobre,
+#experiencia,
+#contato {
+  padding: 4vh 6vw;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  height: 100vh;
+  min-width: 100vw;
+  justify-content: space-evenly;
 }
 
 /*** MENU SUPERIOR/ NAVS [N4VS] ***/
@@ -43,54 +64,68 @@ nav a:hover {
   background-color: #ffffff0e;
   border-radius: 20px;
 }
+nav,
+nav span,
+nav span a {
+  flex-basis: 100%;
+}
 
 /*** CAMPO INICIO [!NIC1] ***/
 #inicio {
   background-image: url("inicio-img-fundo2.png");
-  height: 100vh;
-  max-width: 100vw;
-  background-size: cover;
-  background-repeat: no-repeat;
   position: relative;
-  top: 0;
 }
-#inicio div:first-of-type {
-  height: 20vh;
-  margin: 52vh 0 0 50px;
-  margin-bottom: 0;
+#inicio section {
   position: absolute;
-  top: 0;
-  padding: 0;
+  text-align: left;
+  width: 28vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-self: end;
+  left: 6vw;
+  bottom: 7vh;
 }
-#inicio p img {
-  height: 2vh;
-  width: 1vw;
-}
-#inicio span a img {
-  height: 65px;
-}
-#inicio span a img:hover {
-  height: 75px;
+#inicio h1 {
+  flex-wrap: wrap;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1;
 }
 #inicio span {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 60px;
   position: absolute;
-  bottom: 17vh;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-self: flex-end;
+  justify-self: flex-end;
+  right: 20vw;
+  bottom: 7vh;
+}
+#inicio span img {
+  height: 10vh;
+  width: auto;
+}
+#inicio p img {
+  height: auto;
+  width: 20px;
+}
+
+#inicio span a img:hover {
+  height: 75px;
 }
 
 /*** CAMPO SOBRE [S@BR] ***/
 #sobre {
-  margin-top: 0;
   display: flex;
-  position: relative;
-}
-#sobre div {
   flex-wrap: wrap;
-  box-sizing: border-box;
+  background-image: url("sobre-objeto.png");
+}
+
+#sobre section {
+  display: flex;
+  flex-direction: column;
+  height: auto;
 }
 #sobre img {
   position: absolute;
@@ -98,37 +133,54 @@ nav a:hover {
   z-index: -2;
   opacity: 30%;
 }
-
-#sobre .conhecimentos span {
-  border: 2px solid #202020;
-  color: white;
-  line-height: 36px;
-  border-radius: 12px;
-  font-size: 15px;
+#sobre .conhecimentos {
+  box-sizing: border-box;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+#sobre .conhecimentos article {
+  flex-direction: row;
+  margin-top: 2vh;
+  width: 50%;
+  height: auto;
+  box-sizing: border-box;
+  flex-wrap: wrap;
   text-align: left;
-  padding: 5px 8px;
-  margin: 2px;
+  justify-content: flex-start;
+  align-content: space-evenly;
 }
 #sobre .caixa-texto {
-  padding: 0;
-  margin: 40px 0;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 2vh 1vw;
+}
+#sobre .caixa-texto p {
+  display: flex;
+  width: 90%;
+}
+
+.conhecimentos span {
+  line-height: 1;
+  margin: 2px;
+  padding: 2px;
+  border: 2px solid #202020;
+  color: white;
+  font-size: 18px;
+  border-radius: 12px;
+  text-align: left;
 }
 
 /*** CAMPO EXPERIÊNCIA [EX8P] ***/
 #experiencia {
-  display: flex;
+  flex-direction: column;
   background-color: #121212;
+  justify-content: space-evenly;
 }
-#experiencia p {
-  margin: 12px 0;
-}
-#experiencia div {
-  flex-wrap: wrap;
-  box-sizing: border-box;
-}
-#experiencia .caixa-texto p a {
+#experiencia .caixa-texto a {
   background-color: #0000009c;
   border: 2px solid #ffffff25;
+  line-height: 7px;
+  height: auto;
   padding: 4px;
   border-radius: 8px;
 }
@@ -148,27 +200,19 @@ nav a:hover {
   border: none;
   cursor: pointer;
 }
-#experiencia .caixa-texto.horizontal,
-.caixa-texto.vertical {
-  display: flex;
-  flex-wrap: nowrap;
+#experiencia .caixa-texto.horizontal {
   padding: 1.3vh;
-  height: 12vh;
-  flex-direction: row;
+  height: auto;
 }
 #experiencia .caixa-texto.horizontal {
   align-items: center;
 }
 
-#experiencia .caixa-texto.horizontal span {
-  flex-direction: column;
-  flex-wrap: nowrap;
-  height: 95%;
-}
 #experiencia .caixa-texto.horizontal span,
 #experiencia .caixa-texto.vertical span {
   align-items: center;
   justify-content: center;
+  align-content: space-evenly;
   background-color: #0000009c;
   border-radius: 20px;
   padding: 1vw;
@@ -177,10 +221,9 @@ nav a:hover {
 .caixa-texto.vertical a:hover {
   color: #ff4d6b;
 }
-
 #experiencia .outras-experiencias span {
   max-width: 300px;
-  padding: 1vw;
+  height: fit-content;
   justify-content: center;
 }
 
@@ -188,53 +231,50 @@ nav a:hover {
 #contato {
   background-image: url("contatos-img-fundo2.png");
   max-height: 100vh;
-  max-width: 100vw;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
   display: flex;
   bottom: 0px;
   align-items: center;
   justify-content: center;
 }
 #contato div {
-  display: flex;
   position: absolute;
-  justify-content: space-evenly;
-  align-items: center;
-  box-sizing: border-box;
 }
 #contato form {
   position: absolute;
-  box-sizing: border-box;
   padding: 10px;
   background-color: #ffffff05;
   border: 1px solid #ffffff25;
   backdrop-filter: blur(15px);
-  height: 70vh;
-  max-height: 70vh;
   border-radius: 3%;
-  text-align: center;
+  min-width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
+
 #contato form input {
-  box-sizing: border-box;
-  margin-bottom: 3%;
   height: 30px;
-  max-height: 76%;
   color: #d0d0d0;
 }
 #contato form input ::placeholder {
   font-weight: bold;
 }
+#contato form .nome,
+form .email,
+textarea {
+  min-width: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
 #contato form .nome {
-  width: 100%;
+  justify-content: space-between;
 }
 #contato form .nome input {
-  display: inline;
+  width: 50%;
 }
 #contato form .email input {
-  display: inline;
-  width: 96%;
+  min-width: 100%;
 }
 #contato form button {
   background-color: #7c4dffa2;
@@ -264,8 +304,7 @@ textarea {
 #contato form button:hover {
   border: 3px solid #ffffff25;
 }
-
-@media only screen and (min-width: 854px) {
+@media only screen and (min-width: 1081px) {
   /*** MENU SUPERIOR/ NAVS - DESKTOP [N4VS] ***/
   nav img,
   .icone-menu {
@@ -291,12 +330,7 @@ textarea {
   }
 
   /*** CAMPO INICIO - DESKTOP [!NIC1] ***/
-  #inicio h1 {
-    flex-wrap: wrap;
-    font-size: 40px;
-    font-weight: bold;
-    line-height: 0;
-  }
+
   #inicio span {
     right: 5vw;
   }
@@ -312,20 +346,21 @@ textarea {
   }
 
   /*** CAMPO SOBRE - DESKTOP [S@BR] ***/
-  #sobre .caixa-texto {
-    max-width: 35vw;
-  }
-  #sobre .conhecimentos span {
-    width: 200px;
+  #sobre {
+    background-size: contain;
+    background-position-x: 42vw;
   }
   #sobre .conhecimentos span:hover {
     border-color: #ff4d6b;
+  }
+  #sobre section {
+    width: 40vw;
   }
   #sobre img {
     bottom: 60px;
     width: 60%;
     height: 80%;
-    left: 47vw;
+    left: 45vw;
   }
 
   /*** CAMPO EXPERIÊNCIA - DESKTOP [EX8P] ***/
@@ -339,31 +374,75 @@ textarea {
   }
   #experiencia h1 {
     text-align: center;
+    line-height: -1;
   }
   #experiencia p {
+    max-width: 50vw;
+  }
+  #experiencia section {
+    width: 95vw;
+  }
+  #experiencia article {
     max-width: 50vw;
   }
   #experiencia .projetos-mobile {
     display: none;
   }
   #experiencia .caixa-texto {
-    display: flex;
     position: relative;
     max-width: 88vw;
-    max-height: 28vh;
+    max-height: auto;
     z-index: 0;
     padding: 8px;
-    margin-top: 30px;
     background-color: #121212;
   }
+  #experiencia .projetos-desktop {
+    width: 80vw;
+    height: auto;
+  }
   #experiencia .caixa-texto.projetos-desktop {
-    width: 50vw;
-    position: relative;
+    width: 55vw;
+  }
+  #experiencia .caixa-texto.projetos-desktop div:nth-of-type(2) {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #experiencia .caixa-texto.projetos-desktop div:nth-of-type(2) div {
+    width: 35%;
+    justify-content: space-between;
+  }
+  #experiencia .caixa-texto.projetos-desktop:first-of-type {
+    margin-bottom: 20px;
+  }
+
+  #experiencia .caixa-texto.projetos-desktop {
+    padding: 8px;
+    align-content: space-around;
+    box-sizing: border-box;
+  }
+  #experiencia .caixa-texto.projetos-desktop a {
+    display: flex;
+    align-items: center;
+  }
+  #experiencia .caixa-texto.projetos-desktop a:hover {
+    background-color: #4e6eb3;
+  }
+  #experiencia .caixa-texto.projetos-desktop div:first-of-type {
+    padding: 0;
+  }
+  #experiencia .caixa-texto.projetos-desktop .descricao p {
+    background-color: #00000057;
+    box-sizing: border-box;
+    min-width: 99%;
+    border-radius: 20px;
+    padding: 8px;
   }
   .botao-gif3,
   .botao-gif4 {
     display: flex;
-    position: absolute;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -384,9 +463,6 @@ textarea {
   .botao-gif3:hover,
   .botao-gif4:hover {
     background-color: #ff4d6b;
-  }
-  #experiencia .caixa-texto p a:hover {
-    background-color: #4e6eb3;
   }
   .caixa-gif3,
   .caixa-gif4 {
@@ -427,17 +503,10 @@ textarea {
   .abrir {
     display: flex;
   }
-  #experiencia .caixa-texto p a {
-    right: 38vw;
-  }
-  #experiencia .caixa-texto p a {
-    margin-left: 500px;
-  }
-  #experiencia .caixa-texto.projetos-desktop p a {
-    position: absolute;
-    right: 2vw;
-    bottom: 2.2vh;
-    height: 5.2vh;
+  #experiencia .caixa-texto.horizontal span {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: fit-content;
   }
   #experiencia .caixa-texto.horizontal p,
   .caixa-texto.vertical p {
@@ -447,32 +516,33 @@ textarea {
   .caixa-texto.vertical br {
     display: none;
   }
-  #experiencia .caixa-texto.horizontal span {
-    margin-left: 20px;
-    align-items: center;
-    display: flex;
-  }
-  #experiencia .caixa-texto.vertical span {
-    max-width: 20vw;
-  }
-  #experiencia .caixa-texto.vertical {
-    background-color: #0e0d0d7a;
-  }
   #experiencia .caixa-texto.horizontal a,
   .caixa-texto.vertical a {
     color: #5c5c5c;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
-  .caixa-texto.vertical {
+  #experiencia .caixa-texto.vertical {
     position: absolute;
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: space-around;
-    min-height: 60vh;
-    top: -29vw;
-    left: 63vw;
+    flex-wrap: wrap;
+    background-color: #0e0d0d7a;
+    flex-direction: column;
+    align-items: center;
+    height: 51.5vh;
+    top: 122px;
     width: 25vw;
+    right: 110px;
+  }
+  #experiencia .caixa-texto.vertical article {
+    height: 90%;
+    width: 100%;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  #experiencia .caixa-texto.vertical span {
+    max-width: 20vw;
+    line-height: 1;
+    height: fit-content;
   }
   .caixa-texto.vertical h2 {
     text-align: center;
@@ -482,27 +552,25 @@ textarea {
     display: flex;
   }
   #experiencia .outras-experiencias {
-    position: absolute;
-    top: 75vh;
-    width: 90vw;
+    max-width: 86vw;
+  }
+  #experiencia .outras-experiencias article {
+    min-width: 75%;
+    height: 90%;
+    justify-content: space-evenly;
+    align-content: space-around;
   }
 
   /*** CAMPO CONTATO - DESKTOP [C@TT] ***/
   #contato div {
-    width: 50vw;
-  }
-  #contato form {
-    max-width: 30vw;
+    left: 30vw;
+    width: 30vw;
+    height: 70vh;
   }
   #contato form .nome input {
     width: 47%;
   }
-  #contato form .nome input:first-of-type {
-    margin-right: 6.6px;
-  }
-  #contato form .email input {
-    width: 96%;
-  }
+
   #contato form button {
     min-width: 5vh;
     width: 15%;
@@ -516,7 +584,7 @@ textarea {
     padding-left: 5px;
   }
 }
-@media only screen and (max-width: 853px) {
+@media only screen and (max-width: 1080px) {
   /*** MENU SUPERIOR/ NAVS - MOBILE [N4VS] ***/
   .navbar {
     display: none;
@@ -536,18 +604,19 @@ textarea {
     backdrop-filter: blur(8px);
   }
   .mobile-menu {
-    height: 70vh;
-    width: 35vw;
-    margin: 0 4vw;
-    padding-top: 9vh;
-    top: 45px;
-    z-index: 3;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
     background-color: #141414d0;
     border: 1px solid #ffffff25;
     border-radius: 15px;
+    margin: 2vw;
+    height: 70vh;
+    width: 45vw;
+    top: 45px;
+    z-index: 3;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-evenly;
+    justify-content: space-evenly;
   }
   .icone-menu img {
     height: 25px;
@@ -568,28 +637,22 @@ textarea {
   }
 
   /*** CAMPO INICIO - MOBILE [!NIC1] ***/
+
   #inicio {
     background-position-x: -30vw;
   }
   #inicio span {
-    right: 30px;
-  }
-  section:first-of-type div {
-    margin: 52vh 0 0 30px;
+    right: 20px;
   }
 
   /*** CAMPO SOBRE - MOBILE [S@BR] ***/
-  #sobre div img {
-    left: -100px;
-    bottom: 0px;
-    width: auto;
-    height: 100%;
-  }
   #sobre .conhecimentos span {
     border-color: #ff4d6b;
   }
   #sobre {
     padding: 0.5vh 0.5vw;
+    background-position-x: -40vw;
+    background-size: cover;
   }
 
   /*** CAMPO EXPERIÊNCIA - MOBILE [EX8P] ***/
@@ -600,12 +663,17 @@ textarea {
   #experiencia {
     padding: 0.5vh 0.5vw;
   }
-  #experiencia .caixa-texto.caixa-texto.projetos-desktop {
+  #experiencia section {
+    width: 98vw;
+    max-height: 100vh;
+    padding: 1.5vw;
+  }
+  #experiencia .projetos-desktop {
     display: none;
   }
   .projetos-mobile {
     max-width: 100vw;
-    max-height: 65vh;
+    max-height: 50vh;
     padding: 1vh 1vw;
     display: flex;
     align-items: center;
@@ -660,24 +728,34 @@ textarea {
     background-color: #000000d2;
     backdrop-filter: blur(100px);
     position: fixed;
-    box-sizing: border-box;
-    align-items: start;
+    align-items: center;
+    align-content: space-between;
     z-index: 4;
     top: 0px;
     left: 0px;
     width: 100vw;
     height: 100vh;
-    padding: 1vh 1vw;
+    padding: 0 2vw 2vh 2vw;
+  }
+  .caixa-texto-mobile section,
+  .caixa-texto-mobile2 section {
+    width: 100%;
+    justify-self: center;
+    justify-content: center;
+    text-align: center;
   }
   .fechar-gif,
   .fechar-gif2 {
-    max-width: 1vw;
-    max-height: 0.5vh;
+    background-color: transparent;
+    border: none;
+    max-width: 20px;
+    height: auto;
+    line-height: 0;
   }
   .fechar-gif img,
   .fechar-gif2 img {
     width: 20px;
-    height: 20px;
+    height: auto;
   }
   .caixa-texto-mobile {
     display: none;
@@ -687,9 +765,9 @@ textarea {
   }
   .caixa-gif,
   .caixa-gif2 {
+    background-color: #4e6eb3;
     backdrop-filter: blur(25px);
-    margin-top: 1vh;
-    height: 55vh;
+    height: auto;
     width: 100vw;
     z-index: 4;
   }
@@ -729,33 +807,27 @@ textarea {
   }
 
   #experiencia .caixa-texto.horizontal span,
-  #experiencia .caixa-texto.horizontal a,
-  .caixa-texto.vertical span,
-  .caixa-texto.vertical a {
+  #experiencia .caixa-texto.horizontal a {
     font-size: 12px;
     line-height: 10px;
   }
-  #experiencia .caixa-texto.horizontal span,
-  .caixa-texto.vertical span {
+  #experiencia .caixa-texto.horizontal span {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     margin-left: 1vw;
     padding: 3px;
   }
-  .caixa-texto.vertical {
-    flex-wrap: nowrap;
-    flex-direction: column;
-  }
-  .caixa-texto.vertical span {
-    max-width: 150px;
+  #experiencia .caixa-texto.horizontal a,
+  .caixa-texto.vertical a {
+    color: #5c5c5c;
+    flex-wrap: wrap;
   }
   #experiencia .caixa-texto.horizontal span h3,
   .caixa-texto.vertical span h3 {
     font-size: 10px;
     line-height: normal;
   }
-
   #experiencia .caixa-texto.horizontal .margin-top,
   .caixa-texto.vertical .margin-top {
     margin-top: 0.5vh;
@@ -765,35 +837,84 @@ textarea {
     font-size: 13px;
     margin-top: 1vh;
   }
+  #experiencia .caixa-texto.vertical {
+    flex-wrap: wrap;
+    position: static;
+    background-color: #0e0d0d7a;
+    flex-direction: row;
+    align-items: center;
+    max-height: 52vh;
+    top: 130px;
+    width: 100%;
+    right: 110px;
+  }
+  #experiencia .caixa-texto.vertical article {
+    height: auto;
+    width: 100%;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+  #experiencia .caixa-texto.vertical span {
+    width: auto;
+    line-height: 1;
+    height: fit-content;
+  }
+  .caixa-texto.vertical h2 {
+    text-align: center;
+  }
+  .caixa-texto.vertical {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .caixa-texto.vertical span {
+    max-width: 150px;
+  }
+  .caixa-texto.vertical span,
+  .caixa-texto.vertical a {
+    font-size: smaller;
+  }
 
   /*** CAMPO CONTATO - MOBILE [C@TT] ***/
   #contato div {
-    width: 80vw;
+    box-sizing: border-box;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-evenly;
+    width: 88vw;
+    height: 60vh;
   }
   #contato form {
-    max-width: 80vw;
-    height: 70vh;
+    min-width: 100%;
+    height: 100%;
+    align-content: space-between;
+    justify-content: space-between;
+  }
+  #contato form .nome,
+  form .email,
+  textarea {
+    min-width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
   #contato form .nome input {
-    width: 45.8%;
-  }
-  #contato form .nome input:first-of-type {
-    margin-right: 6.6px;
+    width: 50%;
   }
   #contato form .email input {
-    width: 96%;
+    min-width: 100%;
   }
   #contato form button {
-    min-width: 5vh;
-    width: 15%;
-    right: -5%;
+    width: 18%;
+    height: auto;
+    right: -6%;
   }
   #contato textarea {
-    height: 75%;
+    height: 83%;
   }
   #contato form input,
   textarea {
-    padding-left: 5px;
+    padding-left: 2vw;
   }
 }
-/*** @media only screen and (max-width: 853px);***/
