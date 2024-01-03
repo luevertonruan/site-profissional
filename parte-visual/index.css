@@ -533,6 +533,8 @@ textarea {
     right: 110px;
   }
   #experiencia .caixa-texto.vertical article {
+    position: absolute;
+    margin: 10px;
     height: 90%;
     width: 100%;
     justify-content: space-evenly;
